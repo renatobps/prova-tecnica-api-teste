@@ -5,6 +5,10 @@ import br.com.sicredi.test.model.Simulacao;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
+import static br.com.sicredi.test.utils.Utils.getProperties;
+
 public class TestJunit {
 
     Simulacao simulacao = new Simulacao();
@@ -17,7 +21,7 @@ public class TestJunit {
 
         simulacao.criarSimulacao(
                 "Renato",
-                "97093236010",
+                "97093232133",
                 "email@email.com",
                 1200.00,
                 3,
@@ -28,7 +32,15 @@ public class TestJunit {
     }
     @Test
     public void consultarSimulacaoCPF(){
-        simulacao.consultarSimulaca();
+        simulacao.consultarSimulacaoCPF(getProperties("cpf"));
+        Assert.assertEquals(200, simulacao.getResponse().getStatusCode());
+    }
+    @Test
+    public void consultarSimulacoes(){
+        simulacao.consultarSimulacoes();
+        List<String> lista = simulacao.getResponse().jsonPath().getList("cpf");
+        Integer index = lista.indexOf(getProperties("cpf"));
+        Assert.assertEquals(getProperties("cpf"), simulacao.getResponse().jsonPath().get("cpf["+index+"]"));
         Assert.assertEquals(200, simulacao.getResponse().getStatusCode());
     }
 }
