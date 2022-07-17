@@ -21,7 +21,7 @@ public class Simulacao {
     public Simulacao() throws Exception {
     }
 
-    public void criarSimulacao(String nome, String cpf, String email, Double valor, int parcelas, Boolean seguro) throws Exception {
+    public void criarSimulacao(String nome, String cpf, String email, int valor, int parcelas, String seguro) throws Exception {
 
         SimulacaoMap.initHeader();
 
@@ -52,7 +52,28 @@ public class Simulacao {
         List<String> lista = response.jsonPath().getList("cpf");
         Integer index = lista.indexOf(getProperties("cpf"));
     }
+    public void atualizarSimulacao(String nome, String cpf, String email, Double valor, int parcelas, Boolean seguro) {
+        SimulacaoMap.initHeader();
 
+        obj.put("nome", nome);
+        obj.put("cpf", cpf);
+        obj.put("email", email);
+        obj.put("valor", valor);
+        obj.put("parcelas", parcelas);
+        obj.put("seguro", seguro);
+        response = RESTMethods.executePutPathParams(URL_LOCAL + "api/v1/simulacoes/"+cpf+"", obj.toString(), SimulacaoMap.getHeader(), SimulacaoMap.getParams());
+
+    }
+    public void excluirSimulacao(String cpf) {
+        SimulacaoMap.initHeader();
+        response = RESTMethods.executeDelete(URL_LOCAL + "api/v1/simulacoes/"+cpf+"", SimulacaoMap.getHeader(), SimulacaoMap.getParams());
+
+    }
+    public void consultarRestricaoCPF(String cpf) {
+        SimulacaoMap.initHeader();
+        response = RESTMethods.executeGetpathParams(URL_LOCAL + "api/v1/restricoes/"+cpf+"", SimulacaoMap.getHeader(), SimulacaoMap.getParams());
+
+    }
 
     public Response getResponse() {
         return response;

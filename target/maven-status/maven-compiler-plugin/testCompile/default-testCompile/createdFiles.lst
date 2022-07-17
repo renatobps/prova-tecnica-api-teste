@@ -1,0 +1,10 @@
+br\com\sicredi\test\utils\Utils.class
+br\com\sicredi\test\model\TestModel.class
+br\com\sicredi\test\runner\Runner.class
+br\com\sicredi\test\utils\Urls.class
+br\com\sicredi\test\model\Simulacao.class
+br\com\sicredi\test\utils\ToReadResponse.class
+br\com\sicredi\test\restAssured\RESTMethods.class
+br\com\sicredi\test\restAssured\UtilsREST.class
+br\com\sicredi\test\model\SimulacaoMap.class
+br\com\sicredi\test\runner\TestJunit.class
