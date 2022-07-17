@@ -19,8 +19,12 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.UNDERSCORE;
         , dryRun = false
         ,snippets = UNDERSCORE
         , tags =
-      "@CriarSimulacao"
-//        "@ConsultarSimulacoes"
+      "@CriarSimulacao"+
+        "@ConsultarSimulacoes"+
+          "@ConsultarSimulacaoCPF"+
+          "@AtualizarSimulacao"+
+          "@ExcluirSimulacao"
+//          "@ConsultarRestricaoCPF"
 )
 public class SimulacaoRunner {
 }

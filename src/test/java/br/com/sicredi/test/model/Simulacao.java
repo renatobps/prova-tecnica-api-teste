@@ -21,7 +21,7 @@ public class Simulacao {
     public Simulacao() throws Exception {
     }
 
-    public void criarSimulacao(String nome, String cpf, String email, int valor, int parcelas, String seguro) throws Exception {
+    public void criarSimulacao(String nome, String cpf, String email, double valor, int parcelas, String seguro) throws Exception {
 
         SimulacaoMap.initHeader();
 
@@ -30,7 +30,7 @@ public class Simulacao {
         obj.put("email", email);
         obj.put("valor", valor);
         obj.put("parcelas", parcelas);
-        obj.put("seguro", seguro);
+        obj.put("seguro", Boolean.parseBoolean(seguro));
 
         response = RESTMethods.executePost(URL_LOCAL + "api/v1/simulacoes", obj.toString(), SimulacaoMap.getHeader(), SimulacaoMap.getParams());
        if(RESTMethods.getResponseCode() == 201){
@@ -52,7 +52,7 @@ public class Simulacao {
         List<String> lista = response.jsonPath().getList("cpf");
         Integer index = lista.indexOf(getProperties("cpf"));
     }
-    public void atualizarSimulacao(String nome, String cpf, String email, Double valor, int parcelas, Boolean seguro) {
+    public void atualizarSimulacao(String nome, String cpf, String email, Double valor, int parcelas, String seguro) {
         SimulacaoMap.initHeader();
 
         obj.put("nome", nome);
@@ -60,7 +60,7 @@ public class Simulacao {
         obj.put("email", email);
         obj.put("valor", valor);
         obj.put("parcelas", parcelas);
-        obj.put("seguro", seguro);
+        obj.put("seguro", Boolean.parseBoolean(seguro));
         response = RESTMethods.executePutPathParams(URL_LOCAL + "api/v1/simulacoes/"+cpf+"", obj.toString(), SimulacaoMap.getHeader(), SimulacaoMap.getParams());
 
     }
