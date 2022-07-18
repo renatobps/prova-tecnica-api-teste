@@ -92,17 +92,5 @@ public class TestJunit {
         assertEquals("O CPF " + getProperties("cpfRestrito") + " tem problema", simulacao.getResponse().jsonPath().get("mensagem"));
     }
 
-    public static void main(String[] args) {
-
-System.out.println(getChar());
-    }
-
-    public static boolean getChar() {
-        String cpf = "12345678911";
-        if (!cpf.substring(3).matches("[0-9]*")) {
-            return false;
-        }
-        return true;
-    }
 
     }
