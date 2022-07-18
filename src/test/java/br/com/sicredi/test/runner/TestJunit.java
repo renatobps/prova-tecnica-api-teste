@@ -29,7 +29,7 @@ public class TestJunit {
 
         simulacao.criarSimulacao(
                 "Renato",
-                "97093231111",
+                "97093232222",
                 "email@email.com",
                 1200.00,
                 3,
@@ -76,7 +76,7 @@ public class TestJunit {
     @Test
     @Order(5)
     public void excluirSimulacao() {
-        simulacao.excluirSimulacao(getProperties("cpf"));
+        simulacao.excluirSimulacao(Integer.parseInt(getProperties("id")));
         assertEquals(200, simulacao.getResponse().getStatusCode());
 
     }

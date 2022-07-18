@@ -64,9 +64,9 @@ public class Simulacao {
         response = RESTMethods.executePutPathParams(URL_LOCAL + "api/v1/simulacoes/"+cpf+"", obj.toString(), SimulacaoMap.getHeader(), SimulacaoMap.getParams());
 
     }
-    public void excluirSimulacao(String cpf) {
+    public void excluirSimulacao(int id) {
         SimulacaoMap.initHeader();
-        response = RESTMethods.executeDelete(URL_LOCAL + "api/v1/simulacoes/"+cpf+"", SimulacaoMap.getHeader(), SimulacaoMap.getParams());
+        response = RESTMethods.executeDelete(URL_LOCAL + "api/v1/simulacoes/"+id+"", SimulacaoMap.getHeader(), SimulacaoMap.getParams());
 
     }
     public void consultarRestricaoCPF(String cpf) {

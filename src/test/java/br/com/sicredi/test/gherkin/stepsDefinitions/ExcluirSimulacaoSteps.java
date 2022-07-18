@@ -14,9 +14,9 @@ public class ExcluirSimulacaoSteps {
     public ExcluirSimulacaoSteps() throws Exception {
     }
 
-    @Given("que execute o endpoint para excluir simulacao por cpf inserindo o cpf {string}")
-    public void que_execute_o_endpoint_para_excluir_simulacao_por_cpf_inserindo_o_cpf(String cpf) {
-        simulacao.excluirSimulacao(cpf);
+    @Given("que execute o endpoint para excluir simulacao inserindo o id")
+    public void que_execute_o_endpoint_para_excluir_simulacao_inserindo_o_id() {
+        simulacao.excluirSimulacao(Integer.parseInt(getProperties("id")));
     }
 
 }

@@ -18,13 +18,8 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.UNDERSCORE;
         , plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:target/rerun.txt"}
         , dryRun = false
         ,snippets = UNDERSCORE
-        , tags =
-      "@CriarSimulacao"+
-        "@ConsultarSimulacoes"+
-          "@ConsultarSimulacaoCPF"+
-          "@AtualizarSimulacao"+
-          "@ExcluirSimulacao"
-//          "@ConsultarRestricaoCPF"
+        ,tags = "@Simulacao"
+
 )
 public class SimulacaoRunner {
 }
