@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">jul 18, 2022 01:38:00 AM</span></a>
+<a href="#"><span class="badge badge-primary">jul 18, 2022 07:40:05 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -71,7 +76,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,31 +84,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@ValidarRegrasSimulacao</a><a class="dropdown-item" href="#">@ValidarValorMenor40mil</a>
+<a class="dropdown-item" href="#">@ValidarMessagemExclusaoSimulacaoNaoEncontrada</a><a class="dropdown-item" href="#">@ValidarMensagemErroCamposAtualizarSimulacao</a><a class="dropdown-item" href="#">@ValidarMensagemCamposVazios</a><a class="dropdown-item" href="#">@ValidarMensagemSimulacaoNaoEncontrada</a><a class="dropdown-item" href="#">@ValidarFormatoCPF</a><a class="dropdown-item" href="#">@ValidarMensagemErroCamposCriaSimulacao</a><a class="dropdown-item" href="#">@ValidarRegrasSimulacao</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Validar regras Simulacao</p>
             <p class="text-sm">
-              <span>01:38:01</span> / <span>00:00:02:085</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>19:40:06</span> / <span>00:00:03:306</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Validar regras Simulacao</h5>
-<span class='badge badge-success'>07.18.2022 01:38:01</span>
-<span class='badge badge-danger'>07.18.2022 01:38:03</span>
-<span class='badge badge-default'>00:00:02:085</span>
+<h5 class="test-status text-fail">Validar regras Simulacao</h5>
+<span class='badge badge-success'>07.18.2022 19:40:06</span>
+<span class='badge badge-danger'>07.18.2022 19:40:09</span>
+<span class='badge badge-default'>00:00:03:306</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -115,24 +120,472 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validar valor menor que 4o mil - Endpoint - /api/v1/simulacoes</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validar mensagem campos vazios - Endpoint - /api/v1/simulacoes</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.CriarSimulacaoSteps.que_execute_o_endpoint_para_criar_simulacao_inserindo_nome_cpf_email_valor_parcelas_e_seguro(java.lang.String,java.lang.String,java.lang.String,double,int,java.lang.String)">
-                <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "97093123456", email "renato@email.com", valor 80000.00,  parcelas 6 e seguro "true"</span>
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarMensagemCamposVaziosSteps.que_execute_o_endpoint_para_criar_simulacao_inserindo_parcelas_e_seguro(java.lang.Integer,java.lang.String)">
+                <span>Given que execute o endpoint para criar simulacao inserindo parcelas 6 e seguro "true"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.CriarSimulacaoSteps.receber_o_response_com_o_status_code(java.lang.String)">
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(java.lang.String)">
                 <span>And receber o response com o statusCode "400"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarValorMenor40milSteps.no_body_do_response_deve_ter_mensagem_de_erro_de_valor(java.lang.String)">
-                <span>Then no body do response deve ter mensagem de erro de valor "Valor deve ser menor ou igual a R$ 40.000"</span>
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarMensagemCamposVaziosSteps.no_body_do_response_deve_ter_as_mensagem_de_erro(java.lang.String,java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then no body do response deve ter as mensagem de erro "Valor não pode ser vazio", "CPF não pode ser vazio", "Nome não pode ser vazio", "E-mail não deve ser vazio"</span>
       <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Criar Simulacao com formato invalido - Endpoint - /api/v1/simulacoes</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.que_execute_o_endpoint_para_criar_simulacao_inserindo_nome_cpf_email_valor_parcelas_e_seguro(java.lang.String,java.lang.String,java.lang.String,double,int,java.lang.String)">
+                <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "999.122.325-10", email "renato@email.com", valor 1200.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(java.lang.String)">
+                <span>And receber o response com o statusCode "201"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarNaoCaracterEspeciaisCPFSteps.no_body_do_response_o_campo_cpf_deve_caracter_especiais()">
+                <span>Then no body do response o campo cpf deve caracter especiais</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarNaoCaracterEspeciaisCPFSteps.no_body_do_response_o_campo_cpf_deve_caracter_especiais(ValidarNaoCaracterEspeciaisCPFSteps.java:25)
+	at ✽.no body do response o campo cpf deve caracter especiais(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:14)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="11"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "17822386034", email "renato@email.com", valor 1200.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And receber o response com o statusCode "409"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<40[9]> but was:<40[0]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "409"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:20)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "mensagem" "CPF já existente"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "97093120101", email "email.com", valor 1200.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.email" "não é um endereço de e-mail"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "97093120106", email "renato@email.com", valor 40001.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.valor" "Valor deve ser menor ou igual a R$ 40.000"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="23"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "97093120107", email "renato@email.com", valor 999.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[400]> but was:<[201]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "400"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:20)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.valor" "Valor deve ser maior ou igual a R$ 1.000"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "97093120108", email "renato@email.com", valor 1200.00,  parcelas 1 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.parcelas" "Parcelas deve ser igual ou maior que 2"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="31"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para criar simulacao inserindo nome "Renato Bento", cpf "97093120109", email "renato@email.com", valor 1300.00,  parcelas 49 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[400]> but was:<[201]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "400"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:20)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.parcelas" "Parcelas deve ser igual ou menor que 48"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Consultar simulacao CPF - Endpoint - /api/v1/simulacoes/{cpf}</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.ConsultarSimulacaoCPFSteps.que_execute_o_endpoint_para_consultar_simulacao_por_cpf_inserindo_o_cpf(java.lang.String)">
+                <span>Given que execute o endpoint para consultar simulacao por cpf inserindo o cpf "000011112233"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(java.lang.String)">
+                <span>And receber o response com o statusCode "404"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.ConsultarRestricaoCPFSteps.no_body_do_response_o_campo_mensagem_deve_ter_a_mensagem(java.lang.String)">
+                <span>Then no body do response o campo mensagem deve ter a mensagem "CPF 000011112233 não encontrado"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para atualizar simulacao inserindo nome "Renato", cpf "17822380000", email "renato@email.com", valor 1200.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And receber o response com o statusCode "404"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "mensagem" "CPF 17822380000 não encontrado"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="44"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para atualizar simulacao inserindo nome "Renato", cpf "66414919004", email "email.com", valor 1200.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.email" "não é um endereço de e-mail"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[não é um endereço de e-mail]> but was:<[E-mail deve ser um e-mail válido]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarMensagemErroCamposSteps.no_body_do_response_deve_ter_mensagem_de_erro_na_key(ValidarMensagemErroCamposSteps.java:20)
+	at ✽.no body do response deve ter mensagem de erro na key "erros.email" "não é um endereço de e-mail"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:42)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="48"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para atualizar simulacao inserindo nome "Renato", cpf "66414919004", email "renato@email.com", valor 40001.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[4]00> but was:<[2]00>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "400"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:41)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.valor" "Valor deve ser menor ou igual a R$ 40.000"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="52"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para atualizar simulacao inserindo nome "Renato", cpf "66414919004", email "renato@email.com", valor 999.00,  parcelas 6 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[4]00> but was:<[2]00>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "400"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:41)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.valor" "Valor deve ser maior ou igual a R$ 1.000"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="56"><span class="badge log pass-bg mr-2">Pass</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para atualizar simulacao inserindo nome "Renato", cpf "66414919004", email "renato@email.com", valor 1200.00,  parcelas 1 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.parcelas" "Parcelas deve ser igual ou maior que 2"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="60"><span class="badge log fail-bg mr-2">Fail</span>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given que execute o endpoint para atualizar simulacao inserindo nome "Renato", cpf "66414919004", email "renato@email.com", valor 1300.00,  parcelas 49 e seguro "true"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And receber o response com o statusCode "400"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[4]00> but was:<[2]00>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "400"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:41)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then no body do response deve ter mensagem de erro na key "erros.parcelas" "Parcelas deve ser igual ou menor que 48"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="64"><span class="badge log fail-bg mr-2">Fail</span>Excluir simulacao - Endpoint - /api/v1/simulacoes/{id}</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.regrasSimulcao.ValidarMenagemSimulacaoExclusaoSteps.que_execute_o_endpoint_para_excluir_simulacao_inserindo_o_id_inexistente()">
+                <span>Given que execute o endpoint para excluir simulacao inserindo o id inexistente</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(java.lang.String)">
+                <span>And receber o response com o statusCode "404"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[404]> but was:<[200]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.CriarSimulacaoSteps.receber_o_response_com_o_status_code(CriarSimulacaoSteps.java:35)
+	at ✽.receber o response com o statusCode "404"(file:///C:/Users/renato.souza/Downloads/Sicredi/prova-tecnica-api-teste/src/test/java/br/com/sicredi/test/feature/ValidarRegrasSimulacao.feature:56)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="br.com.sicredi.test.gherkin.stepsDefinitions.simulacao.ConsultarRestricaoCPFSteps.no_body_do_response_o_campo_mensagem_deve_ter_a_mensagem(java.lang.String)">
+                <span>Then no body do response o campo mensagem deve ter a mensagem "Simulação não encontrada"</span>
+      <div>Step skipped
       </div>
               </div>
           </div>
@@ -150,10 +603,10 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view exception-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
 <ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
@@ -161,15 +614,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>8</span>
 </span>
-<p class="name">@ValidarRegrasSimulacao</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">org.junit.ComparisonFailure</p>
+<p class="duration text-sm">8 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@ValidarRegrasSimulacao</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>org.junit.ComparisonFailure</h4>
+<span status="fail" class='badge log badge-danger'>8 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -180,13 +633,269 @@
 </tr>
 </thead>
 <tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>And receber o response com o statusCode "409"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes.And receber o response com o statusCode "409"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='25'>And receber o response com o statusCode "400"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes.And receber o response com o statusCode "400"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>And receber o response com o statusCode "400"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes.And receber o response com o statusCode "400"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Then no body do response deve ter mensagem de erro na key "erros.email" "não é um endereço de e-mail"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}.Then no body do response deve ter mensagem de erro na key "erros.email" "não é um endereço de e-mail"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='50'>And receber o response com o statusCode "400"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}.And receber o response com o statusCode "400"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='54'>And receber o response com o statusCode "400"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}.And receber o response com o statusCode "400"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>And receber o response com o statusCode "400"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}.And receber o response com o statusCode "400"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='66'>And receber o response com o statusCode "404"</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Excluir simulacao - Endpoint - /api/v1/simulacoes/{id}.And receber o response com o statusCode "404"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>Then no body do response o campo cpf deve caracter especiais</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Criar Simulacao com formato invalido - Endpoint - /api/v1/simulacoes.Then no body do response o campo cpf deve caracter especiais</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">7</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ValidarMessagemExclusaoSimulacaoNaoEncontrada</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidarMessagemExclusaoSimulacaoNaoEncontrada</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='64'>Excluir simulacao - Endpoint - /api/v1/simulacoes/{id}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Excluir simulacao - Endpoint - /api/v1/simulacoes/{id}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@ValidarMensagemErroCamposAtualizarSimulacao</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidarMensagemErroCamposAtualizarSimulacao</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>01:38:01 AM</td>
+<td>19:40:09 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Validar valor menor que 4o mil - Endpoint - /api/v1/simulacoes</a>
+<a href="#" class="linked" test-id='1' id='40'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
 <div class="">
-<span class="badge badge-default">Validar regras Simulacao.Validar valor menor que 4o mil - Endpoint - /api/v1/simulacoes</span>
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='52'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='60'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
 </div>
 </td>
 </tr>
@@ -199,12 +908,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@ValidarValorMenor40mil</p>
+<p class="name">@ValidarMensagemCamposVazios</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@ValidarValorMenor40mil</h4>
+<h4>@ValidarMensagemCamposVazios</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -218,11 +927,389 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>01:38:01 AM</td>
+<td>19:40:06 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Validar valor menor que 4o mil - Endpoint - /api/v1/simulacoes</a>
+<a href="#" class="linked" test-id='1' id='2'>Validar mensagem campos vazios - Endpoint - /api/v1/simulacoes</a>
 <div class="">
-<span class="badge badge-default">Validar regras Simulacao.Validar valor menor que 4o mil - Endpoint - /api/v1/simulacoes</span>
+<span class="badge badge-default">Validar regras Simulacao.Validar mensagem campos vazios - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ValidarMensagemSimulacaoNaoEncontrada</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidarMensagemSimulacaoNaoEncontrada</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Consultar simulacao CPF - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Consultar simulacao CPF - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ValidarFormatoCPF</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidarFormatoCPF</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Criar Simulacao com formato invalido - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Criar Simulacao com formato invalido - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@ValidarMensagemErroCamposCriaSimulacao</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidarMensagemErroCamposCriaSimulacao</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+<span class='badge log badge-danger'>11</span>
+</span>
+<p class="name">@ValidarRegrasSimulacao</p>
+<p class="duration text-sm">18 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidarRegrasSimulacao</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+<span status="fail" class='badge log badge-danger'>11 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Validar mensagem campos vazios - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar mensagem campos vazios - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Criar Simulacao com formato invalido - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Criar Simulacao com formato invalido - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos - Endpoint - /api/v1/simulacoes</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Consultar simulacao CPF - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Consultar simulacao CPF - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='40'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='52'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='60'>Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Validar regras e mensagens dos campos atualizar simulacao - Endpoint - /api/v1/simulacoes/{cpf}</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:40:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='64'>Excluir simulacao - Endpoint - /api/v1/simulacoes/{id}</a>
+<div class="">
+<span class="badge badge-default">Validar regras Simulacao.Excluir simulacao - Endpoint - /api/v1/simulacoes/{id}</span>
 </div>
 </td>
 </tr>
@@ -243,25 +1330,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>jul 18, 2022 01:38:00 AM</h3>
+<h3>jul 18, 2022 07:40:05 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>jul 18, 2022 01:38:03 AM</h3>
+<h3>jul 18, 2022 07:40:09 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -277,12 +1364,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -300,9 +1387,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='43%'><b>7</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='56%'><b>9</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -320,10 +1407,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> steps passed</small></div>
+<div><small data-tooltip='66%'><b>32</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='18%'><b>9</b> steps failed,
+<b>7</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -339,7 +1426,7 @@
 </div></div>
 <script>
 var timeline = {
-"Validar regras Simulacao":2.085
+"Validar regras Simulacao":3.306
 };
 </script>
 <div class="row">
@@ -349,7 +1436,23 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@ValidarRegrasSimulacao</td>
+<td>@ValidarMessagemExclusaoSimulacaoNaoEncontrada</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@ValidarMensagemErroCamposAtualizarSimulacao</td>
+<td>2</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>28,571%</td>
+</tr>
+<tr>
+<td>@ValidarMensagemCamposVazios</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -357,12 +1460,36 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@ValidarValorMenor40mil</td>
+<td>@ValidarMensagemSimulacaoNaoEncontrada</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
+</tr>
+<tr>
+<td>@ValidarFormatoCPF</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@ValidarMensagemErroCamposCriaSimulacao</td>
+<td>3</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>42,857%</td>
+</tr>
+<tr>
+<td>@ValidarRegrasSimulacao</td>
+<td>7</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>38,889%</td>
 </tr>
 </tbody>
 </table></div>
@@ -373,21 +1500,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
-failChild: 0,
+passChild: 7,
+failChild: 9,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 3,
-failGrandChild: 0,
+passGrandChild: 32,
+failGrandChild: 9,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 7,
 infoGrandChild: 0,
 eventsCount: 5,
 };

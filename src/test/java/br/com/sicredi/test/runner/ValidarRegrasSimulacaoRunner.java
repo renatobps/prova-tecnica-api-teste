@@ -13,7 +13,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.UNDERSCORE;
         , plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:target/rerun.txt"}
         , dryRun = false
         ,snippets = UNDERSCORE
-        ,tags = "  @ValidarValorMenor40mil"
+        ,tags = "@ValidarRegrasSimulacao"
 
 )
 
