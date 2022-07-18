@@ -1,0 +1,40 @@
+pipeline {
+    agent {
+        node {
+          
+            label 'TESTE_SIMULACAO'
+        }
+    }
+    stages {
+        stage('Clean & Build') {
+            steps {
+                bat 'mvn clean'
+            }
+        }
+        stage('Tests') {
+            steps {
+                script {
+                    try {
+                        bat 'mvn test'
+                    } catch (err) {
+                        echo err.message
+                        currentBuild.result ='FAILURE'
+                    }
+                }
+                echo currentBuild.result
+            }
+        }
+        stage('Publish Report') {
+            steps {
+                publishHTML (target: [
+                  allowMissing: false,
+                  alwaysLinkToLastBuild: false,
+                  keepAll: true,
+                  reportDir: 'target/output',
+                  reportFiles: 'report.html',
+                  reportName: "Relatório de testes"
+                  ])
+            }
+        }
+    }
+}
