@@ -40,6 +40,22 @@ public class Simulacao {
 
     }
 
+    public void regrasCriarSimulacao(int parcelas, String seguro) throws Exception {
+
+        SimulacaoMap.initHeader();
+
+        obj.remove("nome");
+        obj.remove("cpf");
+        obj.remove("email");
+        obj.remove("valor");
+        obj.put("parcelas", parcelas);
+        obj.put("seguro", Boolean.parseBoolean(seguro));
+
+        response = RESTMethods.executePost(URL_LOCAL + "api/v1/simulacoes", obj.toString(), SimulacaoMap.getHeader(), SimulacaoMap.getParams());
+
+    }
+
+
 
     public void consultarSimulacaoCPF(String cpf) {
         SimulacaoMap.initHeader();

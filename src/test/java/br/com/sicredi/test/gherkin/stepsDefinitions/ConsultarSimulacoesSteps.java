@@ -28,7 +28,6 @@ public class ConsultarSimulacoesSteps {
         Integer index = lista.indexOf(cpf);
 
         assertEquals(cpf, simulacao.getResponse().jsonPath().get("cpf["+index+"]"));
-
         assertThat(simulacao.getResponse().jsonPath().getList("cpf"), hasItem(cpf));
     }
 }
