@@ -34,30 +34,33 @@ public class TestJunit {
                 1200.00,
                 3,
                 "true"
-                    );
+        );
         assertEquals(201, simulacao.getResponse().getStatusCode());
 
     }
+
     @Test
     @Order(2)
-    public void consultarSimulacaoCPF(){
+    public void consultarSimulacaoCPF() {
         simulacao.consultarSimulacaoCPF(getProperties("cpf"));
         assertEquals(200, simulacao.getResponse().getStatusCode());
         assertEquals(simulacao.getResponse().jsonPath().get("cpf"), getProperties("cpf"));
-        assertEquals(simulacao.getResponse().jsonPath().get("nome"),"Renato bento");
+        assertEquals(simulacao.getResponse().jsonPath().get("nome"), "Renato bento");
 
     }
+
     @Test
     @Order(3)
-    public void consultarSimulacoes(){
+    public void consultarSimulacoes() {
         simulacao.consultarSimulacoes();
 
         List<String> lista = simulacao.getResponse().jsonPath().getList("cpf");
         Integer index = lista.indexOf(getProperties("cpf"));
-        assertEquals(getProperties("cpf"), simulacao.getResponse().jsonPath().get("cpf["+index+"]"));
+        assertEquals(getProperties("cpf"), simulacao.getResponse().jsonPath().get("cpf[" + index + "]"));
         assertThat(simulacao.getResponse().jsonPath().getList("cpf"), hasItem(getProperties("cpf")));
         assertEquals(200, simulacao.getResponse().getStatusCode());
     }
+
     @Test
     @Order(4)
     public void atualiarSimulacao() throws Exception {
@@ -80,11 +83,26 @@ public class TestJunit {
         assertEquals(200, simulacao.getResponse().getStatusCode());
 
     }
+
     @Test
     @Order(6)
-    public void consultarRestricaoCPF(){
+    public void consultarRestricaoCPF() {
         simulacao.consultarRestricaoCPF(getProperties("cpfRestrito"));
         assertEquals(200, simulacao.getResponse().getStatusCode());
-        assertEquals("O CPF "+getProperties("cpfRestrito")+" tem problema", simulacao.getResponse().jsonPath().get("mensagem"));
+        assertEquals("O CPF " + getProperties("cpfRestrito") + " tem problema", simulacao.getResponse().jsonPath().get("mensagem"));
     }
+
+    public static void main(String[] args) {
+
+System.out.println(getChar());
+    }
+
+    public static boolean getChar() {
+        String cpf = "12345678911";
+        if (!cpf.substring(3).matches("[0-9]*")) {
+            return false;
+        }
+        return true;
+    }
+
     }

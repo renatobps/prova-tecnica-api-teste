@@ -1,4 +1,4 @@
-package br.com.sicredi.test.gherkin.stepsDefinitions;
+package br.com.sicredi.test.gherkin.stepsDefinitions.simulacao;
 
 import br.com.sicredi.test.model.Simulacao;
 import br.com.sicredi.test.restAssured.RESTMethods;

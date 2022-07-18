@@ -1,6 +1,7 @@
-package br.com.sicredi.test.gherkin.stepsDefinitions;
+package br.com.sicredi.test.gherkin.stepsDefinitions.simulacao;
 
 import br.com.sicredi.test.model.Simulacao;
+import br.com.sicredi.test.restAssured.RESTMethods;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -21,6 +22,6 @@ public class ConsultarRestricaoCPFSteps {
     }
     @Then("no body do response o campo mensagem deve ter a mensagem {string}")
     public void no_body_do_response_o_campo_mensagem_deve_ter_a_mensagem(String mensagem) {
-        assertEquals(mensagem, simulacao.getResponse().jsonPath().get("mensagem"));
+        assertEquals(mensagem, RESTMethods.key("mensagem"));
     }
 }
