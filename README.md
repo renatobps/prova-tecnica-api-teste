@@ -3,7 +3,7 @@
 ## RESUMO
 Automação de API com restAssured e java, utilizando BDD, cucumber e cucumber report.
 ## 2. Estrutura do projeto:
-###2.1 Features
+### 2.1 Features
 Onde encontra os cenários BDDs, com a escrita gherkin dos comportamentos que cada cenário deve ter.
 #### 2.1.1 Simulacao.feature ->
 Contém os cenários positivos onde todos as requisições não contêm erro de resposta
